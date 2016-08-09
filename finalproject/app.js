@@ -1,3 +1,7 @@
+"""
+This is the controller for our final project
+"""
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
