@@ -1,6 +1,4 @@
-"""
-This is the controller for our final project
-"""
+
 
 var express = require('express');
 var path = require('path');
@@ -8,7 +6,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var glob = require('glob'); //allows for globbing files by names
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -60,12 +57,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
-//grabs all the controllers in the folder, and adds them to the controllers
-//list. synchronous function.
-var controllers = glob.sync(config.root + '/app/controllers/*.js');
-controllers.forEach(function assignController(controller) {
-	require(controller)(app);
-});
 
 
 module.exports = app;
