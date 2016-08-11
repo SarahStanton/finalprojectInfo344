@@ -60,6 +60,20 @@ h1, h2{
   height: 24px;
   width: 24px;
 }
+
+.coreSpriteHashtag {
+  
+  background-image: url(//instagramstatic-a.akamaihd.net/h1/sprites/core/f60ff7.png);
+  
+  background-repeat: no-repeat;
+  
+  background-position: -14px -671px;
+  
+  height: 18px;
+  
+  width: 14px;
+  
+}
 .navbar-brand{
 font-family:'proxima-nova';
 }
