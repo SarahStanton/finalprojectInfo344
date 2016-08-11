@@ -1,6 +1,6 @@
 'use strict'
 
-var app = angular.module('finalproject', ["ui.router"]);
+var app = angular.module('finalproject', ["ui.router", "ngAnimate"]);
 
 
 app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
@@ -18,19 +18,18 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
 				controller: "FeedCtrl"
 			}
 		).state(
-			"details", {
-				url: "/details",
-				templateUrl: "./partials/details.ejs",
-				controller: "DetailsCtrl"
-			}
-		).state(
 			"likes", {
 				url: "/likes",
 				templateUrl: "./partials/likes.ejs",
 				controller: "LikesCtrl"
 			}
-		);
-
+		).state(
+			"location", {
+				url: "/location",
+				templateUrl: "./partials/details.ejs",
+				controller: "ListCtrl"
+			}
+		)
 		$urlRouterProvider.otherwise("/");
 }]);
 
@@ -48,7 +47,6 @@ app.factory("user", ["$http", function($http){
 		},
 	};
 }]);
-
 
 app.factory("LikesService", [function() {
 
@@ -101,13 +99,17 @@ app.controller("HomeCtrl", ["$scope", "LikesService", function($scope, LikesServ
 }]);
 
 
-// Controller for the details page
-app.controller("DetailsCtrl", ["$scope", "user", function($scope, user) {
+// Controller for the feed page
+app.controller("FeedCtrl", ["$scope", "user", function($scope, user) {
 
 }]);
 
+// Controller for the List page
+app.controller("ListCtrl", ["$scope", "user", "stateParams", function($scope, user, stateParams) {
+
+}]);
 // Controller for the details page
-app.controller("DetailsCtrl", ["$scope", "user", function($scope, user) {
+app.controller("DetailsCtrl", ["$scope", "user", "stateParams", function($scope, user, stateParams) {
 
 }]);
 

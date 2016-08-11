@@ -27,7 +27,7 @@ body {
 a {
   color: #999;
 }
-h1 {
+h1, h2{
   font-family: 'Lobster', bold;
    color:#125688;
 }
@@ -68,3 +68,26 @@ font-family:'proxima-nova';
   text-align:center;
   padding-top:1em;
 }
+.headingp{
+  padding:1em 1em;
+  margin: 1em 1em;
+}
+.picture{
+ 
+ max-width:30em;
+ max-height:30em;
+}
+
+    align-items: center;
+    height: 64px;
+    padding: 14px 20px;
+
+._22yr2 {
+    background-color: #edeeee;
+    display: block;
+    width: 100%;
+
+    ._jjzlb {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 100%;
