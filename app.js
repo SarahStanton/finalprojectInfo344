@@ -11,6 +11,14 @@ var users = require('./routes/users');
 
 var app = express();
 
+// set up mongoose
+//var mongoose = require('mongoose');
+//require('./models/Picture');
+
+//mongoose.Promise = global.Promise;
+
+//mongoose.connect('mongodb://localhost/sortable');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
