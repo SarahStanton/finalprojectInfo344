@@ -111,7 +111,7 @@ app.controller("DetailsCtrl", ["$scope", "user", function($scope, user) {
 
 }]);
 
-app.controller("LikesCtrl", ["$scope", "user", "LikesService", function($scope, user, channelService) {
+app.controller("LikesCtrl", ["$scope", "user", "LikesService", function($scope, user, LikesService) {
 
 	$scope.likes = LikesService.getLikes();
 
