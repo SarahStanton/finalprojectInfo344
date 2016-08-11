@@ -83,7 +83,7 @@ app.factory("LikesService", [function() {
 
 // Controller for index page
 // Global scope to know when a user is signed in
-app.controller("MainCtrl", ["$scope", "channelService", function($scope, channelService) {
+app.controller("MainCtrl", ["$scope", "LikesService", function($scope, LikesService) {
 
 	$scope.isSignedIn = true;
 
@@ -95,7 +95,7 @@ app.controller("MainCtrl", ["$scope", "channelService", function($scope, channel
 }]);
 
 // Controller for the home page
-app.controller("HomeCtrl", ["$scope", "channelService", function($scope, channelService) {
+app.controller("HomeCtrl", ["$scope", "LikesService", function($scope, LikesService) {
 
 
 }]);
